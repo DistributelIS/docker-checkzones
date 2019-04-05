@@ -4,6 +4,7 @@ import os
 import sys
 import subprocess
 
+goodzones = 0
 badzones = []
 
 for entry in os.scandir(sys.argv[1]):
@@ -31,7 +32,10 @@ for entry in os.scandir(sys.argv[1]):
 
 	if returncode:
 		badzones.append (zonename)
+	else:
+		goodzones += 1
 
+print ('\n' + str(goodzones) + ' zone files passed validation')
 print ('\n' + str(len(badzones)) + ' zone files failed validation')
 
 for z in badzones:
