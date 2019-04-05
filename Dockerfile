@@ -8,5 +8,3 @@ RUN apt-get update -qq && apt-get install -y bind9utils python3
 
 COPY run.sh /run.sh
 COPY checkzones.py /checkzones.py
-
-ENTRYPOINT ["/run.sh"]
