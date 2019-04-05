@@ -34,4 +34,7 @@ for entry in os.scandir(sys.argv[1]):
 
 print ('\n' + str(len(badzones)) + ' zone files failed validation')
 
+for z in badzones:
+	print('- ' z)
+
 sys.exit (len(badzones))
