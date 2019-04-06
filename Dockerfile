@@ -1,10 +1,9 @@
 FROM debian:latest
-MAINTAINER Razvan Crainea <razvan@opensips.org>
+MAINTAINER Denis Lemire <denis.lemire@distributel.ca>
 
 USER root
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -qq && apt-get install -y bind9utils python3
 
-COPY run.sh /run.sh
 COPY checkzones.py /checkzones.py
